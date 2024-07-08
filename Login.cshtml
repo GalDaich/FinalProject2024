@@ -1,0 +1,15 @@
+﻿@page
+@model TripMatch.Pages.Shared.LoginModel
+@{
+	    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+<form method="post" asp-page-handler="Login">
+<label asp-for="Email">Email:</label>
+<input type="email" class="form-control" id="Email" name="Email" asp-for="Email" required>
+<label asp-for="Password">Password:</label>
+<input type="password" class="form-control" id="Password" name="Password" asp-for="Password" required>
+
+<button type="submit" >Login</button>
+</form>
