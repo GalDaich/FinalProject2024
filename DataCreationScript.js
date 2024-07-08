@@ -1,4 +1,5 @@
 //creating 2 collections and using the _id from the People collection in the TravelPlans collection
+//this is a test comment
 
 const { faker } = require("@faker-js/faker/locale/en_US");
 const { MongoClient } = require("mongodb");
