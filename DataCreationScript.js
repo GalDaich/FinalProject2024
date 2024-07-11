@@ -1,6 +1,3 @@
-//creating 2 collections and using the _id from the People collection in the TravelPlans collection
-//this is a test comment
-
 const { faker } = require("@faker-js/faker/locale/en_US");
 const { MongoClient } = require("mongodb");
 
@@ -170,9 +167,24 @@ function generateFakePerson() {
     age--;
   }
 
+  const travelInfo = {
+    wantsToTravelTo: selectRandomItem(whereToTravel),
+    wantsToLeaveOn: selectRandomItem(monthToLeave),
+    wantedTrip: selectRandomItem(typeOfTrip),
+    preferredAccomodation: selectRandomItem(preferredAccomodation),
+    agesToMatchWith: selectRandomItem(agesToMatchWith),
+    shomerShabbat: selectRandomItem(yesOrNoFields),
+    hasDriversLicense: selectRandomItem(yesOrNoFields),
+    veganOrVegetarian: selectRandomItem(yesOrNoFields),
+    isSpontanious: selectRandomItem(yesOrNoFields),
+    prefersNightTrips: selectRandomItem(yesOrNoFields),
+  };
+
   return {
     personalInfo: {
       fullName: faker.person.firstName() + " " + faker.person.lastName(),
+      emailAddress: faker.internet.email(),
+      password: faker.internet.password({ length: 12 }),
       phoneNumber: generateFakePhoneNumber(),
       dateOfBirth: dateOfBirth,
       currentAge: age,
@@ -181,19 +193,17 @@ function generateFakePerson() {
         selectRandomItem(hobbies)
       ),
     },
-    travelInfo: {
-      wantsToTravelTo: selectRandomItem(whereToTravel),
-      wantsToLeaveOn: selectRandomItem(monthToLeave),
-      wantedTrip: selectRandomItem(typeOfTrip),
-      preferredAccomodation: selectRandomItem(preferredAccomodation),
-      agesToMatchWith: selectRandomItem(agesToMatchWith),
-      shomerShabbat: selectRandomItem(yesOrNoFields),
-      hasDriversLicense: selectRandomItem(yesOrNoFields),
-      veganOrVegetarian: selectRandomItem(yesOrNoFields),
-      isSpontanious: selectRandomItem(yesOrNoFields),
-      prefersNightTrips: selectRandomItem(yesOrNoFields),
-    },
+    travelInfo: travelInfo,
   };
+}
+
+function isAgeMatch(age, ageRange) {
+  if (ageRange === "51+") {
+    return age >= 51;
+  } else {
+    const [minAge, maxAge] = ageRange.split("-").map(Number);
+    return age >= minAge && age <= maxAge;
+  }
 }
 
 const uri = "mongodb://localhost:27017";
@@ -206,17 +216,24 @@ async function run() {
   try {
     await client.connect();
 
-    const database = client.db("FPDB-UsersAndTravelPlans-250k");
-    const personalCollection = database.collection("Users");
-    const travelCollection = database.collection("TravelPlans");
+    const database = client.db("FPDB-UsersAndTravelPlans-1107-250k-v5");
+    const usersCollection = database.collection("Users");
+    const travelPlansCollection = database.collection("TravelPlans");
 
     const fakePeople = Array.from({ length: 250000 }, generateFakePerson);
 
-    const personalInsertResults = await personalCollection.insertMany(
-      fakePeople.map((person) => person.personalInfo)
+    const filteredPeople = fakePeople.filter((person) =>
+      isAgeMatch(
+        person.personalInfo.currentAge,
+        person.travelInfo.agesToMatchWith
+      )
     );
 
-    const travelPlans = fakePeople.map((person, index) => ({
+    const personalInsertResults = await usersCollection.insertMany(
+      filteredPeople.map((person) => person.personalInfo)
+    );
+
+    const travelPlans = filteredPeople.map((person, index) => ({
       personId: personalInsertResults.insertedIds[index],
       fullName: person.personalInfo.fullName,
       phoneNumber: person.personalInfo.phoneNumber,
@@ -227,7 +244,7 @@ async function run() {
       ...person.travelInfo,
     }));
 
-    await travelCollection.insertMany(travelPlans);
+    await travelPlansCollection.insertMany(travelPlans);
 
     console.log(
       `Successfully inserted ${personalInsertResults.insertedCount} personal documents and ${travelPlans.length} travel documents.`
