@@ -1,0 +1,80 @@
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\appsettings.json
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\TripMatch.staticwebassets.runtime.json
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\TripMatch.exe
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\TripMatch.deps.json
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\TripMatch.runtimeconfig.json
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\TripMatch.dll
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\TripMatch.pdb
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\TripMatch.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\TripMatch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\TripMatch.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\TripMatch.AssemblyInfo.cs
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\TripMatch.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\TripMatch.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\TripMatch.RazorAssemblyInfo.cache
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\TripMatch.RazorAssemblyInfo.cs
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\scopedcss\bundle\TripMatch.styles.css
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\scopedcss\projectbundle\TripMatch.bundle.scp.css
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\TripMatch.dll
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\refint\TripMatch.dll
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\TripMatch.pdb
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\TripMatch.genruntimeconfig.cache
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\ref\TripMatch.dll
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\AWSSDK.Core.dll
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\AWSSDK.SecurityToken.dll
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\DnsClient.dll
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\MongoDB.Bson.dll
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\MongoDB.Driver.dll
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\MongoDB.Driver.Core.dll
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\MongoDB.Libmongocrypt.dll
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\SharpCompress.dll
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\Snappier.dll
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\ZstdSharp.dll
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\User\Desktop\project\TripMatch\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
+C:\Users\User\Desktop\project\TripMatch\obj\Debug\net6.0\TripMatch.csproj.CopyComplete
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\appsettings.json
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\TripMatch.staticwebassets.runtime.json
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\TripMatch.exe
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\TripMatch.deps.json
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\TripMatch.runtimeconfig.json
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\TripMatch.dll
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\TripMatch.pdb
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\AWSSDK.Core.dll
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\AWSSDK.SecurityToken.dll
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\DnsClient.dll
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\MongoDB.Bson.dll
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\MongoDB.Driver.dll
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\MongoDB.Driver.Core.dll
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\MongoDB.Libmongocrypt.dll
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\SharpCompress.dll
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\Snappier.dll
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\ZstdSharp.dll
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\User\Desktop\project - Copy\TripMatch\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\TripMatch.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\TripMatch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\TripMatch.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\TripMatch.AssemblyInfo.cs
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\TripMatch.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\TripMatch.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\TripMatch.RazorAssemblyInfo.cache
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\TripMatch.RazorAssemblyInfo.cs
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\scopedcss\bundle\TripMatch.styles.css
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\scopedcss\projectbundle\TripMatch.bundle.scp.css
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\TripMatch.csproj.CopyComplete
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\TripMatch.dll
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\refint\TripMatch.dll
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\TripMatch.pdb
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\TripMatch.genruntimeconfig.cache
+C:\Users\User\Desktop\project - Copy\TripMatch\obj\Debug\net6.0\ref\TripMatch.dll

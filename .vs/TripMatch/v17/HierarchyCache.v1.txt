@@ -1,0 +1,249 @@
+﻿++Solution 'TripMatch' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:TripMatch.sln
+++TripMatch
+i:{00000000-0000-0000-0000-000000000000}:TripMatch
+++Connected Services 
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:>489
+++Dependencies
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:>488
+++Properties
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\properties\
+++wwwroot
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\
+++Data
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\
+++Shared
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\shared\
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\shared\
+++DataCreationScript.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\datacreationscript.js
+++MLFP-VER3.ipynb
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\mlfp-ver3.ipynb
+++MLFP-VER4.ipynb
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\mlfp-ver4.ipynb
+++Pages
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\
+++_ViewImports.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\_viewimports.cshtml
+++_ViewStart.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\_viewstart.cshtml
+++Error.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\error.cshtml
+++Index.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\index.cshtml
+++Login.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\login.cshtml
+++Login.cshtml.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\login.cshtml.cs
+++Privacy.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\privacy.cshtml
+++appsettings.json
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\appsettings.json
+++MongoDBConnection.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\mongodbconnection.cs
+++Program.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\program.cs
+++Startup.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\startup.cs
+++TravelPlans.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\travelplans.cs
+++User.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\user.cs
+++No service dependencies discovered
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:>490
+++Analyzers
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:analyzers
+++Frameworks
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:frameworks
+++Packages
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:packages
+++launchSettings.json
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\properties\launchsettings.json
+++css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\css\
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\
+++images
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\images\
+++js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\js\
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\js\
+++lib
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\
+++appsettings.Development.json
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\appsettings.development.json
+++favicon.ico
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\favicon.ico
+++_ValidationScriptsPartial.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\shared\_validationscriptspartial.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\shared\_validationscriptspartial.cshtml
+++_Layout.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\shared\_layout.cshtml
+++Error.cshtml.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\error.cshtml.cs
+++Index.cshtml.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\index.cshtml.cs
+++Privacy.cshtml.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\privacy.cshtml.cs
+++AWSSDK.SecurityToken.CodeAnalysis
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\.nuget\packages\awssdk.securitytoken\3.7.100.14\analyzers\dotnet\cs\awssdk.securitytoken.codeanalysis.dll
+++Microsoft.AspNetCore.Analyzers
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.SourceGenerator.Tooling.Internal
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.sourcegenerator.tooling.internal.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++System.Text.Json.SourceGeneration
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.AspNetCore.App
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\microsoft.netcore.app
+++MongoDB.Driver (2.27.0)
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:>508
+++site.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\css\site.css
+++logo.png
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\images\logo.png
+++site.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\js\site.js
+++bootstrap
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\
+++jquery
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery\
+++jquery-validation
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery-validation\
+++jquery-validation-unobtrusive
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery-validation-unobtrusive\
+++_Layout.cshtml.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\shared\_layout.cshtml.css
+++dist
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery\dist\
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery-validation\dist\
+++LICENSE
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\license
+++LICENSE.txt
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery\license.txt
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery-validation-unobtrusive\license.txt
+++LICENSE.md
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery-validation\license.md
+++jquery.validate.unobtrusive.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+++jquery.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery\dist\jquery.js
+++additional-methods.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery-validation\dist\additional-methods.js
+++jquery.validate.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+++jquery.validate.unobtrusive.min.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+++bootstrap.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+++bootstrap-grid.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+++bootstrap-reboot.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+++bootstrap-utilities.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+++bootstrap.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+++jquery.min.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery\dist\jquery.min.js
+++additional-methods.min.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+++jquery.validate.min.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+++bootstrap.css.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+++bootstrap.min.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+++bootstrap.rtl.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+++bootstrap-grid.css.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+++bootstrap-grid.min.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+++bootstrap-grid.rtl.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+++bootstrap-reboot.css.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+++bootstrap-reboot.min.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+++bootstrap-reboot.rtl.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+++bootstrap-utilities.css.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+++bootstrap-utilities.min.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+++bootstrap-utilities.rtl.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+++bootstrap.bundle.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+++bootstrap.esm.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+++bootstrap.js.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+++bootstrap.min.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+++jquery.min.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery\dist\jquery.min.map
+++bootstrap.min.css.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+++bootstrap.rtl.css.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+++bootstrap.rtl.min.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+++bootstrap-grid.min.css.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+++bootstrap-grid.rtl.css.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+++bootstrap-grid.rtl.min.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+++bootstrap-reboot.min.css.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+++bootstrap-reboot.rtl.css.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+++bootstrap-reboot.rtl.min.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+++bootstrap-utilities.min.css.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+++bootstrap-utilities.rtl.css.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+++bootstrap-utilities.rtl.min.css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+++bootstrap.bundle.js.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+++bootstrap.bundle.min.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+++bootstrap.esm.js.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+++bootstrap.esm.min.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+++bootstrap.min.js.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+++bootstrap.rtl.min.css.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+++bootstrap-grid.rtl.min.css.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+++bootstrap-reboot.rtl.min.css.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+++bootstrap-utilities.rtl.min.css.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+++bootstrap.bundle.min.js.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+++bootstrap.esm.min.js.map
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map

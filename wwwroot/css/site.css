@@ -1,0 +1,95 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header .navbar {
+    justify-content: center;
+}
+
+header .navbar-nav {
+    flex-direction: row; 
+    justify-content: center; 
+    width: 100%;
+}
+
+header .navbar-nav .nav-item {
+    margin: 0 5px;
+    text-align: center; 
+}
+
+header .navbar-nav .nav-link {
+    font-size: 1.1rem;
+}
+
+header .navbar-brand img {
+    max-height: 250px;
+    width: auto;
+}
+
+/* Login Page Styles */
+
+.container {
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+    border-bottom: 1px solid #ccc;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.input-group-text {
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+
+.alert {
+    margin-top: 15px;
+}
+
