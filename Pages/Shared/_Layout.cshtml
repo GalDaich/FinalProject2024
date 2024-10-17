@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="~/TripMatch.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
+<header>
         <div class="container">
             <a class="navbar-brand" asp-area="" asp-page="/Index">
                 <img src="~/images/logo.png" alt="TripMatch Logo" class="img-fluid" />
@@ -20,21 +20,36 @@
             <div class="container justify-content-center">
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item mx-2">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Login">Login</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Register">Register</a>
-                        </li>
+                        @if (Context.Session.GetString("Username") == null)
+                        {
+                            <li class="nav-item mx-2">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Login">Login</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Register">Register</a>
+                            </li>
+                        }
+                        @if (Context.Session.GetString("Username") != null)
+                        {
+                            <li class="nav-item mx-2">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/SearchFriends">SearchFriends</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Profile">Profile</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Favourites">Favourites</a>
+                            </li>
+                        }
                         <li class="nav-item mx-2">
                             <a class="nav-link text-dark" asp-area="" asp-page="/About">About Us</a>
                         </li>
                     </ul>
                 </div>
                 <div class="navbar-text">
-                    @if (TempData["Username"] != null)
+                    @if (Context.Session.GetString("Username") != null)
                     {
-                        <span>Hello @TempData["Username"]</span>
+                        <span>Hello @Context.Session.GetString("Username")</span>
                     }
                 </div>
             </div>

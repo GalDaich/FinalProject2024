@@ -1,7 +1,7 @@
 ﻿@page
-@model TripMatch.Pages.LoginModel
+@model TripMatch.Pages.RegistrationModel
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Register";
 }
 
 <div class="container mt-5">
@@ -9,13 +9,19 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header text-center">
-                    <h3>Login</h3>
+                    <h3>Register</h3>
                 </div>
                 <div class="card-body">
-                    <form method="post" asp-page-handler="Login">
+                    <form method="post" asp-page-handler="Register">
+                        <div class="form-group">
+                            <label asp-for="Username">Username:</label>
+                            <input type="text" class="form-control" id="Username" name="Username" asp-for="Username" required>
+                            <span asp-validation-for="Username" class="text-danger"></span>
+                        </div>
                         <div class="form-group">
                             <label asp-for="Email">Email:</label>
                             <input type="email" class="form-control" id="Email" name="Email" asp-for="Email" required>
+                            <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="Password">Password:</label>
@@ -27,6 +33,7 @@
                                     </span>
                                 </div>
                             </div>
+                            <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
                         @if (!string.IsNullOrEmpty(Model.ErrorMessage))
                         {
@@ -35,7 +42,7 @@
                             </div>
                         }
                         <div class="form-group text-center">
-                            <button type="submit" class="btn btn-primary mt-3">Login</button>
+                            <button type="submit" class="btn btn-primary mt-3">Confirm</button>
                         </div>
                     </form>
                 </div>
@@ -60,4 +67,5 @@
             }
         }
     </script>
+    <partial name="_ValidationScriptsPartial" />
 }

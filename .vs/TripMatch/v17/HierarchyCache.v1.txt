@@ -3,87 +3,11 @@ i:{00000000-0000-0000-0000-000000000000}:TripMatch.sln
 ++TripMatch
 i:{00000000-0000-0000-0000-000000000000}:TripMatch
 ++Connected Services 
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:>489
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:>1279
 ++Dependencies
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:>488
-++Properties
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\properties\
-++wwwroot
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\
-++Data
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\
-++Shared
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\shared\
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\shared\
-++DataCreationScript.js
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\datacreationscript.js
-++MLFP-VER3.ipynb
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\mlfp-ver3.ipynb
-++MLFP-VER4.ipynb
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\mlfp-ver4.ipynb
-++Pages
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\
-++_ViewImports.cshtml
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\_viewimports.cshtml
-++_ViewStart.cshtml
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\_viewstart.cshtml
-++Error.cshtml
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\error.cshtml
-++Index.cshtml
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\index.cshtml
-++Login.cshtml
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\login.cshtml
-++Login.cshtml.cs
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\login.cshtml.cs
-++Privacy.cshtml
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\privacy.cshtml
-++appsettings.json
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\appsettings.json
-++MongoDBConnection.cs
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\mongodbconnection.cs
-++Program.cs
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\program.cs
-++Startup.cs
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\startup.cs
-++TravelPlans.cs
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\travelplans.cs
-++User.cs
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\user.cs
-++No service dependencies discovered
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:>490
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:>1278
 ++Analyzers
 i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:analyzers
-++Frameworks
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:frameworks
-++Packages
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:packages
-++launchSettings.json
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\properties\launchsettings.json
-++css
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\css\
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\
-++images
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\images\
-++js
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\js\
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\js\
-++lib
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\
-++appsettings.Development.json
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\appsettings.development.json
-++favicon.ico
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\favicon.ico
-++_ValidationScriptsPartial.cshtml
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\shared\_validationscriptspartial.cshtml
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\shared\_validationscriptspartial.cshtml
-++_Layout.cshtml
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\shared\_layout.cshtml
-++Error.cshtml.cs
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\error.cshtml.cs
-++Index.cshtml.cs
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\index.cshtml.cs
-++Privacy.cshtml.cs
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\privacy.cshtml.cs
 ++AWSSDK.SecurityToken.CodeAnalysis
 i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\.nuget\packages\awssdk.securitytoken\3.7.100.14\analyzers\dotnet\cs\awssdk.securitytoken.codeanalysis.dll
 ++Microsoft.AspNetCore.Analyzers
@@ -108,16 +32,88 @@ i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\program files\dotnet\packs\microsoft
 i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
 ++System.Text.Json.SourceGeneration
 i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Frameworks
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:frameworks
+++Packages
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:packages
+++Properties
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\properties\
+++wwwroot
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\
+++css
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\css\
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\css\
+++images
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\images\
+++logo.png
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\images\logo.png
+++js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\js\
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\js\
+++lib
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\
+++favicon.ico
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\favicon.ico
+++Data
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\
+++Shared
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\shared\
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\shared\
+++DataCreationScript.js
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\datacreationscript.js
+++MLFP-VER3.ipynb
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\mlfp-ver3.ipynb
+++MLFP-VER4.ipynb
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\mlfp-ver4.ipynb
+++Pages
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\
+++_Layout.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\shared\_layout.cshtml
+++_ValidationScriptsPartial.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\shared\_validationscriptspartial.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\data\shared\_validationscriptspartial.cshtml
+++_ViewImports.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\_viewimports.cshtml
+++_ViewStart.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\_viewstart.cshtml
+++AboutUs.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\aboutus.cshtml
+++Error.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\error.cshtml
+++Index.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\index.cshtml
+++Login.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\login.cshtml
+++Login.cshtml.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\login.cshtml.cs
+++Privacy.cshtml
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\privacy.cshtml
+++appsettings.json
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\appsettings.json
+++appsettings.Development.json
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\appsettings.development.json
+++MongoDBConnection.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\mongodbconnection.cs
+++Program.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\program.cs
+++Startup.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\startup.cs
+++TravelPlans.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\travelplans.cs
+++User.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\user.cs
+++No service dependencies discovered
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:>1280
 ++Microsoft.AspNetCore.App
 i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\microsoft.aspnetcore.app
 ++Microsoft.NETCore.App
 i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\microsoft.netcore.app
 ++MongoDB.Driver (2.27.0)
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:>508
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:>1298
+++launchSettings.json
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\properties\launchsettings.json
 ++site.css
 i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\css\site.css
-++logo.png
-i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\images\logo.png
 ++site.js
 i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\js\site.js
 ++bootstrap
@@ -130,6 +126,14 @@ i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tr
 i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery-validation-unobtrusive\
 ++_Layout.cshtml.css
 i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\shared\_layout.cshtml.css
+++AboutUs.cshtml.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\aboutus.cshtml.cs
+++Error.cshtml.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\error.cshtml.cs
+++Index.cshtml.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\index.cshtml.cs
+++Privacy.cshtml.cs
+i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\pages\privacy.cshtml.cs
 ++dist
 i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\bootstrap\dist\
 i:{4cafa7e5-eb69-499c-a66e-ffc319b919c4}:c:\users\user\desktop\project - copy\tripmatch\wwwroot\lib\jquery\dist\

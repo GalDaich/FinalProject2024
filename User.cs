@@ -11,6 +11,9 @@ namespace TripMatch
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
+        [BsonElement("username")]
+        public string Username { get; set; }
+
         [BsonElement("fullName")]
         public string FullName { get; set; }
 
@@ -34,5 +37,11 @@ namespace TripMatch
 
         [BsonElement("additionalHobbies")]
         public List<string> AdditionalHobbies { get; set; }
+
+        // Constructor to initialize collections
+        public User()
+        {
+            AdditionalHobbies = new List<string>();
+        }
     }
 }

@@ -4,9 +4,9 @@ using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
-
-namespace TripMatch.Pages.Shared
+namespace TripMatch.Pages
 {
     public class LoginModel : PageModel
     {
@@ -27,13 +27,26 @@ namespace TripMatch.Pages.Shared
             _logger = logger;
         }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            // אם המשתמש כבר מחובר, נעביר אותו לדף הבית
+            if (HttpContext.Session.GetString("Username") != null)
+            {
+                return RedirectToPage("/Index");
+            }
+            return Page();
         }
 
         public async Task<IActionResult> OnPostLogin()
         {
             _logger.LogInformation("Attempting to login with Email: {Email}", Email);
+
+            // בדיקה שהשדות לא ריקים
+            if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password))
+            {
+                ErrorMessage = "Please fill in all fields.";
+                return Page();
+            }
 
             var user = _db.Users.Find(u => u.EmailAddress.ToLower() == Email.ToLower()).FirstOrDefault();
 
@@ -51,11 +64,15 @@ namespace TripMatch.Pages.Shared
                 return Page();
             }
 
+            // שמירת פרטי המשתמש ב-Session
+            HttpContext.Session.SetString("Username", user.Username);
+            HttpContext.Session.SetString("UserId", user.Id.ToString());
+
             _logger.LogInformation("Login successful for Email: {Email}", Email);
+
+            TempData["SuccessMessage"] = "Login successful!";
 
             return RedirectToPage("/Index");
         }
-
-
     }
 }

@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace TripMatch
 {
@@ -18,9 +19,19 @@ namespace TripMatch
 
         public void ConfigureServices(IServiceCollection services)
         {
+            // שירותים קיימים
             services.AddSingleton<MongoDBConnection>();
             services.AddRazorPages();
             services.AddServerSideBlazor();
+
+            // הוספת תמיכה ב-Session
+            services.AddDistributedMemoryCache(); // נדרש עבור Session
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // משך הסשן
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -37,8 +48,11 @@ namespace TripMatch
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseRouting();
 
+            // הפעלת Session
+            app.UseSession();
+
+            app.UseRouting();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

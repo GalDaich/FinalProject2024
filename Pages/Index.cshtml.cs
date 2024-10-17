@@ -1,20 +1,19 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace TripMatch.Pages
+namespace TripMatch.Pages;
+
+public class IndexModel : PageModel
 {
-    public class IndexModel : PageModel
+    public List<string> ImagePaths { get; set; }
+
+    public void OnGet()
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
-
-        public void OnGet()
-        {
-
-        }
+        ImagePaths = new List<string>
+            {
+                "friends.png",
+                "friends2.png",
+                "airplan.png",
+            };
     }
 }
+
