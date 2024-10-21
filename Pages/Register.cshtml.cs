@@ -16,18 +16,18 @@ namespace TripMatch.Pages
         }
 
         [BindProperty]
-        [Required(ErrorMessage = "שם משתמש הוא שדה חובה")]
-        [StringLength(100, MinimumLength = 3, ErrorMessage = "שם המשתמש חייב להיות לפחות 3 תווים")]
+        [Required(ErrorMessage = "Username is a required field")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "Username must be at least 3 characters")]
         public string Username { get; set; }
 
         [BindProperty]
-        [Required(ErrorMessage = "כתובת מייל היא שדה חובה")]
-        [EmailAddress(ErrorMessage = "כתובת מייל לא תקינה")]
+        [Required(ErrorMessage = "Email address is a required field")]
+        [EmailAddress(ErrorMessage = "Invalid email address")]
         public string Email { get; set; }
 
         [BindProperty]
-        [Required(ErrorMessage = "סיסמה היא שדה חובה")]
-        [StringLength(100, MinimumLength = 6, ErrorMessage = "הסיסמה חייבת להיות לפחות 6 תווים")]
+        [Required(ErrorMessage = "Password is a required field")]
+        [StringLength(100, MinimumLength = 6, ErrorMessage = "Password must be at least 6 characters")]
         public string Password { get; set; }
 
         public string ErrorMessage { get; set; }
@@ -52,7 +52,7 @@ namespace TripMatch.Pages
 
                 if (existingUsername != null)
                 {
-                    ErrorMessage = "שם המשתמש כבר קיים במערכת";
+                    ErrorMessage = "The username is already taken";
                     return Page();
                 }
 
@@ -63,7 +63,7 @@ namespace TripMatch.Pages
 
                 if (existingEmail != null)
                 {
-                    ErrorMessage = "כתובת המייל כבר קיימת במערכת";
+                    ErrorMessage = "The email address is already registered";
                     return Page();
                 }
 
@@ -80,7 +80,7 @@ namespace TripMatch.Pages
             }
             catch (Exception ex)
             {
-                ErrorMessage = "אירעה שגיאה בעת ההרשמה. אנא נסה שוב מאוחר יותר.";
+                ErrorMessage = "An error occurred during registration. Please try again later.";
                 return Page();
             }
         }
