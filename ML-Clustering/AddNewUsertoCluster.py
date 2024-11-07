@@ -8,8 +8,28 @@ def find_best_cluster(new_user_data, centroids):
     min_distance = float('inf')
     best_cluster = None
 
+    # Look for exact matches (case-insensitive)
     for cluster_label, centroid in centroids.iterrows():
-        distance = sum(new_user_data[col] != centroid[col] for col in clustering_columns)
+        matches = []
+        for col in clustering_columns:
+            if str(new_user_data[col]).lower() == str(centroid[col]).lower():
+                matches.append(True)
+            else:
+                matches.append(False)
+
+        if all(matches):
+            return cluster_label
+
+    # If no exact match, find best partial match
+    for cluster_label, centroid in centroids.iterrows():
+        distance = 0
+        for col in clustering_columns:
+            if str(new_user_data[col]).lower() != str(centroid[col]).lower():
+                if col == 'wantstotravelto':
+                    distance += 3  # Location mismatch weighs more
+                else:
+                    distance += 1
+
         if distance < min_distance:
             min_distance = distance
             best_cluster = cluster_label
