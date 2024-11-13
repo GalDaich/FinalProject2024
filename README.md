@@ -39,8 +39,8 @@ Before you start, make sure you have the following installed:
 - [MongoDB Community Server](https://www.mongodb.com/try/download/community)
 
 ### Step-by-Step Installation
-1. **Download the Code**
-2. **Setting up the Python Environment:**
+##**Download the Code**
+##**Setting up the Python Environment:**
     1.Open cmd
     2.Navigate to user director - cd %USERPROFILE%
     3.Create virtual environment - python -m venv venv
@@ -49,4 +49,5 @@ Before you start, make sure you have the following installed:
         python -m pip install setuptools
         python -m pip install --upgrade pip
     6.Install necessary packages - pip install numpy pandas scikit-learn flask pymongo kmodes
+    7.Navigate to machine learning folder - cd \FinalProject2024\ML-Clustering
 3. 
