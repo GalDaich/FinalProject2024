@@ -49,18 +49,18 @@ Before you start, make sure you have the following installed:
 ➜ Run this in cmd: venv\Scripts\activate
 #### Step 5: Update setuptools and pip (IMPORTANT - do these in order!) -
 ➜ Run this in cmd:
-python -m pip install setuptools\n
-python -m pip install --upgrade pip
+python -m pip install setuptools<br>
+python -m pip install --upgrade pip<br>
 #### Step 6: Install necessary packages
 ➜ Run this in cmd: - pip install numpy pandas scikit-learn flask pymongo kmodes
 #### Step 7: Navigate to machine learning folder
 ➜ Run this in cmd: - cd \FinalProject2024\ML-Clustering
 
 ### Run clustering algorithm on Travelplans DB:
-After navigating to the machine learning folder ➜ Run this in cmd: python ClusterDB.py
-
+After navigating to the machine learning folder ➜ Run this in cmd: python ClusterDB.py<br>
 Wait for process to complete
 
 ### Setting up flask application
 Open a new CMD and navigate to the machine learning folder ➜ Run this in cmd: python app.py
 
+## Run Tripmatch project solution
