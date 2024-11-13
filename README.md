@@ -27,10 +27,6 @@ TripMatch is a web application that helps users find compatible travel companion
 ### Machine Learning
 - **Python**: Primary language for our clustering implementation
 - **K-modes Clustering**: Chosen specifically for categorical data handling
-  - Perfect for travel preferences (destinations, months, travel styles)
-  - Better than traditional K-means for non-numeric data
-  - Efficiently groups similar travelers together
-  - Easy to scale with growing user base
 - **Pandas for Data Processing**
 
 
@@ -45,4 +41,12 @@ Before you start, make sure you have the following installed:
 ### Step-by-Step Installation
 1. **Download the Code**
 2. **Setting up the Python Environment:**
-    1. Open cmd and navigate fo ML-Clustering folder - cd ML-Clustering
+    1.Open cmd
+    2.Navigate to user director - cd %USERPROFILE%
+    3.Create virtual environment - python -m venv venv
+    4.Activate virtual environment - venv\Scripts\activate
+    5.Update setuptools and pip (IMPORTANT - do these in order!) - 
+        python -m pip install setuptools
+        python -m pip install --upgrade pip
+    6.Install necessary packages - pip install numpy pandas scikit-learn flask pymongo kmodes
+
