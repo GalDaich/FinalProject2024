@@ -49,4 +49,4 @@ Before you start, make sure you have the following installed:
         python -m pip install setuptools
         python -m pip install --upgrade pip
     6.Install necessary packages - pip install numpy pandas scikit-learn flask pymongo kmodes
-
+3. 
