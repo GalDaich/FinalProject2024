@@ -9,3 +9,12 @@ TripMatch is a web application that helps users find compatible travel companion
 - 🤝 Find travelers with similar plans
 - ⭐ Select your favorite travel buddies
 - 📱 Connect with potential travel companions
+
+
+## Technologies Used for Tripmatch:
+
+### Backend
+- ASP.NET Core
+- MongoDB for database
+- Python Flask API
+- JWT Authentication
