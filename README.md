@@ -41,4 +41,8 @@ Before you start, make sure you have the following installed:
 - [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 - [Python 3.8+](https://www.python.org/downloads/)
 - [MongoDB Community Server](https://www.mongodb.com/try/download/community)
-- [Git](https://git-scm.com/downloads)
+
+### Step-by-Step Installation
+1. **Download the Code**
+2. **Setting up the Python Environment:**
+    1. Open cmd and navigate fo ML-Clustering folder - cd ML-Clustering
