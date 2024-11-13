@@ -40,6 +40,10 @@ Before you start, make sure you have the following installed:
 
 ## Step-by-Step Installation - 
 ### Setting up the Python Environment:
+#### Step 1: Open Command Prompt
+⌨️ Windows + R
+📝 Type "cmd"
+↵ Press Enter
     1.Open cmd
     2.Navigate to user director - cd %USERPROFILE%
     3.Create virtual environment - python -m venv venv
