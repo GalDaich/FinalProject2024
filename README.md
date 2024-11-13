@@ -31,4 +31,14 @@ TripMatch is a web application that helps users find compatible travel companion
   - Better than traditional K-means for non-numeric data
   - Efficiently groups similar travelers together
   - Easy to scale with growing user base
-- **Pandas for Data Processing**:
+- **Pandas for Data Processing**
+
+
+## 🚀 Installation Guide
+
+### Prerequisites
+Before you start, make sure you have the following installed:
+- [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
+- [Python 3.8+](https://www.python.org/downloads/)
+- [MongoDB Community Server](https://www.mongodb.com/try/download/community)
+- [Git](https://git-scm.com/downloads)
