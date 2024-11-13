@@ -39,7 +39,6 @@ Before you start, make sure you have the following installed:
 - [MongoDB Community Server](https://www.mongodb.com/try/download/community)
 
 ## Step-by-Step Installation - 
-### Download the Code
 ### Setting up the Python Environment:
     1.Open cmd
     2.Navigate to user director - cd %USERPROFILE%
