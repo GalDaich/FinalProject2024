@@ -18,3 +18,17 @@ TripMatch is a web application that helps users find compatible travel companion
 - MongoDB for database
 - Python Flask API
 - JWT Authentication
+
+### Frontend
+- Razor Pages
+- Bootstrap 5
+- jQuery
+
+### Machine Learning
+- **Python**: Primary language for our clustering implementation
+- **K-modes Clustering**: Chosen specifically for categorical data handling
+  - Perfect for travel preferences (destinations, months, travel styles)
+  - Better than traditional K-means for non-numeric data
+  - Efficiently groups similar travelers together
+  - Easy to scale with growing user base
+- **Pandas for Data Processing**:
