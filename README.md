@@ -42,11 +42,10 @@ Before you start, make sure you have the following installed:
 ### Setting up the Python Environment:
 #### Step 1: Open Command Prompt
 #### Step 2: Navigate to User Directory
-    ➜ Run this in cmd: cd %USERPROFILE%
+➜ Run this in cmd: cd %USERPROFILE%
+#### Step 3: Create virtual environment
+➜ Run this in cmd: - python -m venv venv
 
-    1.Open cmd
-    2.Navigate to user director - cd %USERPROFILE%
-    3.Create virtual environment - python -m venv venv
     4.Activate virtual environment - venv\Scripts\activate
     5.Update setuptools and pip (IMPORTANT - do these in order!) - 
         python -m pip install setuptools
