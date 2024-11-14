@@ -65,4 +65,6 @@ Open a new CMD<br>
 Start up the virual environment<br> 
 Navigate to the machine learning folder and start the flask app ➜ Run this in cmd: python app.py
 
+## Open MongoDB compass
+
 ## Run Tripmatch project solution
