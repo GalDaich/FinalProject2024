@@ -59,10 +59,6 @@ python -m pip install --upgrade pip<br>
 After navigating to the machine learning folder ➜ Run this in cmd: python ClusterDB.py<br>
 Wait for process to complete
 
-### Upload user data to MongoDB:
-In CMD navigate to Userdata folder, \GitHub\FinalProject2024\Userdata <br>
-➜ Run this in cmd : python uploaduserstomongo.py
-
 ### Setting up flask application
 Open a new CMD<br>
 Start up the virual environment<br> 
