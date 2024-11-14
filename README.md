@@ -53,11 +53,15 @@ python -m pip install --upgrade pip<br>
 #### Step 6: Install necessary packages
 ➜ Run this in cmd: - pip install numpy pandas scikit-learn flask pymongo kmodes
 #### Step 7: Navigate to machine learning folder
-➜ Run this in cmd: - cd \FinalProject2024\ML-Clustering
+➜ Run this in cmd: - cd \GitHub\FinalProject2024\ML-Clustering
 
 ### Run clustering algorithm on Travelplans DB:
 After navigating to the machine learning folder ➜ Run this in cmd: python ClusterDB.py<br>
 Wait for process to complete
+
+### Upload user data to MongoDB:
+In CMD navigate to Userdata folder, \GitHub\FinalProject2024\Userdata <br>
+➜ Run this in cmd : python uploaduserstomongo.py
 
 ### Setting up flask application
 Open a new CMD<br>
