@@ -53,7 +53,7 @@ python -m pip install --upgrade pip<br>
 #### Step 6: Install necessary packages
 ➜ Run this in cmd: - pip install numpy pandas scikit-learn flask pymongo kmodes
 #### Step 7: Navigate to machine learning folder
-➜ Run this in CMD (adjust path to your computer): cd \FinalProject2024\ML-Clustering
+➜ Run this in cmd (adjust path to your computer): cd \FinalProject2024\ML-Clustering
 
 ### Run clustering algorithm on Travelplans DB:
 After navigating to the machine learning folder ➜ Run this in cmd: python ClusterDB.py<br>
