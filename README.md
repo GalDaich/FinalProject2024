@@ -61,6 +61,8 @@ After navigating to the machine learning folder ➜ Run this in cmd: python Clus
 Wait for process to complete
 
 ### Setting up flask application
-Open a new CMD and navigate to the machine learning folder ➜ Run this in cmd: python app.py
+Open a new CMD<br>
+Start up the virual environment<br> 
+Navigate to the machine learning folder and start the flask app ➜ Run this in cmd: python app.py
 
 ## Run Tripmatch project solution
