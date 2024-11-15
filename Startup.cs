@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using TripMatch.Services;
 using System;
 
 namespace TripMatch
@@ -19,19 +19,22 @@ namespace TripMatch
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // שירותים קיימים
-            services.AddSingleton<MongoDBConnection>();
-            services.AddRazorPages();
-            services.AddServerSideBlazor();
+            services.AddRazorPages(options => {});
 
-            // הוספת תמיכה ב-Session
-            services.AddDistributedMemoryCache(); // נדרש עבור Session
+            services.AddDistributedMemoryCache();
             services.AddSession(options =>
             {
-                options.IdleTimeout = TimeSpan.FromMinutes(30); // משך הסשן
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
             });
+
+            // Add MongoDB services
+            services.AddScoped<MongoDBService>();
+            services.AddScoped<FlaskApiClient>();
+
+            // Add HTTP context accessor
+            services.AddHttpContextAccessor();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -49,16 +52,21 @@ namespace TripMatch
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            // הפעלת Session
+            app.UseRouting();
+
             app.UseSession();
 
-            app.UseRouting();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
-                endpoints.MapBlazorHub();
+                // Add explicit route for the home page
+                endpoints.MapGet("/", context =>
+                {
+                    context.Response.Redirect("/Index");
+                    return Task.CompletedTask;
+                });
             });
         }
     }

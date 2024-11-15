@@ -3,84 +3,211 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MongoDB.Driver;
 using TripMatch;
+using TripMatch.Services;
+using TripMatch.Models;
+
 
 namespace TripMatch.Pages
 {
-    public class RegistrationModel : PageModel
+    public class FutureDateAttribute : ValidationAttribute
     {
-        private readonly MongoDBConnection _mongoDBConnection;
-
-        public RegistrationModel(MongoDBConnection mongoDBConnection)
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
-            _mongoDBConnection = mongoDBConnection;
+            if (value is DateTime dateOfBirth)
+            {
+                if (dateOfBirth > DateTime.Today)
+                {
+                    return new ValidationResult("Please enter a valid date of birth");
+                }
+                if (dateOfBirth.Year <= 1900)
+                {
+                    return new ValidationResult("Please enter a valid date of birth");
+                }
+                return ValidationResult.Success;
+            }
+            return new ValidationResult("Date of birth is a required field");
+        }
+    }
+    public class MinimumAgeAttribute : ValidationAttribute
+    {
+        private readonly int _minimumAge;
+
+        public MinimumAgeAttribute(int minimumAge)
+        {
+            _minimumAge = minimumAge;
         }
 
-        [BindProperty]
-        [Required(ErrorMessage = "Username is a required field")]
-        [StringLength(100, MinimumLength = 3, ErrorMessage = "Username must be at least 3 characters")]
-        public string Username { get; set; }
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        {
+            if (value is DateTime dateOfBirth)
+            {
+                if (dateOfBirth > DateTime.Today)
+                {
+                    return ValidationResult.Success;
+                }
+
+                var today = DateTime.Today;
+                var age = today.Year - dateOfBirth.Year;
+
+                if (dateOfBirth.Date > today.AddYears(-age))
+                {
+                    age--;
+                }
+
+                if (age >= _minimumAge)
+                {
+                    return ValidationResult.Success;
+                }
+            }
+
+            return new ValidationResult(ErrorMessage ?? $"Minimum age required is {_minimumAge}");
+        }
+    }
+    public class RegistrationModel : PageModel
+    {
+        private readonly MongoDBService _db;
+        private readonly ILogger<RegistrationModel> _logger;
 
         [BindProperty]
-        [Required(ErrorMessage = "Email address is a required field")]
+        [Required(ErrorMessage = "Full name is required")]
+        [Display(Name = "Full Name")]
+        public string FullName { get; set; }
+
+        [BindProperty]
+        [Required(ErrorMessage = "Email is required")]
         [EmailAddress(ErrorMessage = "Invalid email address")]
-        public string Email { get; set; }
+        [Display(Name = "Email Address")]
+        public string EmailAddress { get; set; }
 
         [BindProperty]
-        [Required(ErrorMessage = "Password is a required field")]
-        [StringLength(100, MinimumLength = 6, ErrorMessage = "Password must be at least 6 characters")]
+        [Required(ErrorMessage = "Password is required")]
+        [StringLength(100, MinimumLength = 6, ErrorMessage = "Password must be at least 6 characters long")]
         public string Password { get; set; }
+
+        [BindProperty]
+        [Required(ErrorMessage = "Phone number is required")]
+        [Phone(ErrorMessage = "Invalid phone number")]
+        [Display(Name = "Phone Number")]
+        public string PhoneNumber { get; set; }
+
+        [BindProperty]
+        [Required(ErrorMessage = "Date of birth is a required field")]
+        [Display(Name = "Date of birth")]
+        [DataType(DataType.Date)]
+        [MinimumAge(18, ErrorMessage = "You must be at least 18 years old to register")]
+        public DateTime DateOfBirth { get; set; }
+
+        [BindProperty]
+        [Required(ErrorMessage = "Location is required")]
+        [Display(Name = "Location")]
+        public string LivesAt { get; set; }
+
+        [BindProperty]
+        [Required(ErrorMessage = "First hobby is required")]
+        [Display(Name = "First Hobby")]
+        public string Hobby1 { get; set; }
+
+        [BindProperty]
+        [Required(ErrorMessage = "Second hobby is required")]
+        [Display(Name = "Second Hobby")]
+        public string Hobby2 { get; set; }
 
         public string ErrorMessage { get; set; }
 
-        public void OnGet()
+        public RegistrationModel(MongoDBService db, ILogger<RegistrationModel> logger)
         {
+            _db = db;
+            _logger = logger;
+            DateOfBirth = DateTime.Today;
         }
 
-        public async Task<IActionResult> OnPostRegisterAsync()
+        public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
             try
             {
-                // בדיקה אם שם המשתמש כבר קיים
-                var existingUsername = await _mongoDBConnection.Users
-                    .Find(u => u.Username == Username)
-                    .FirstOrDefaultAsync();
-
-                if (existingUsername != null)
+                if (DateOfBirth > DateTime.Today)
                 {
-                    ErrorMessage = "The username is already taken";
+                    ModelState.AddModelError("DateOfBirth", "Please enter a valid date of birth");
                     return Page();
                 }
 
-                // בדיקה אם כתובת המייל כבר קיימת
-                var existingEmail = await _mongoDBConnection.Users
-                    .Find(u => u.EmailAddress == Email)
-                    .FirstOrDefaultAsync();
-
-                if (existingEmail != null)
+                var age = DateTime.Today.Year - DateOfBirth.Year;
+                if (DateOfBirth.Date > DateTime.Today.AddYears(-age))
                 {
-                    ErrorMessage = "The email address is already registered";
+                    age--;
+                }
+                if (age < 18)
+                {
+                    ModelState.AddModelError("DateOfBirth", "You must be at least 18 years old to register");
+                    return Page();
+                }
+                if (!ModelState.IsValid)
+                {
+                    return Page();
+                }
+
+                // Check if email already exists
+                var existingUserByEmail = await _db.GetUserByEmailAsync(EmailAddress);
+                if (existingUserByEmail != null)
+                {
+                    ErrorMessage = "Email address is already registered";
+                    return Page();
+                }
+
+                // check for existing phone number
+                var existingUserByPhone = await _db.GetUserByPhoneNumberAsync(PhoneNumber);
+                if (existingUserByPhone != null)
+                {
+                    ErrorMessage = "Phone number is already registered";
+                    return Page();
+                }
+
+                //additional validation for date of birth
+                if (DateOfBirth.Year <= 1900 || DateOfBirth.Year > DateTime.Today.Year)
+                {
+                    ModelState.AddModelError("DateOfBirth", "Please enter a valid date of birth");
+                    return Page();
+                }
+
+                if (!ModelState.IsValid)
+                {
                     return Page();
                 }
 
                 var user = new User
                 {
-                    Username = Username,
-                    EmailAddress = Email,
-                    Password = Password 
+                    FullName = FullName,
+                    EmailAddress = EmailAddress,
+                    Password = Password, 
+                    PhoneNumber = PhoneNumber,
+                    DateOfBirth = DateOfBirth,
+                    LivesAt = LivesAt,
+                    Hobby1 = Hobby1,
+                    Hobby2 = Hobby2
                 };
 
-                await _mongoDBConnection.Users.InsertOneAsync(user);
-                HttpContext.Session.SetString("Username", user.Username);
-                return RedirectToPage("/Index"); 
+                user.UpdateAge();
+                user.NormalizeData();
+
+                await _db.CreateUserAsync(user);
+                _logger.LogInformation("User registered successfully: {Email}", EmailAddress);
+
+                HttpContext.Session.SetString("UserId", user.Id);
+                HttpContext.Session.SetString("UserName", user.FullName);
+                HttpContext.Session.SetString("UserEmail", user.EmailAddress);
+
+                return RedirectToPage("/Index");
+            }
+            catch (InvalidOperationException ex)
+            {
+                _logger.LogWarning(ex, "Registration failed - duplicate information");
+                ErrorMessage = ex.Message;
+                return Page();
             }
             catch (Exception ex)
             {
-                ErrorMessage = "An error occurred during registration. Please try again later.";
+                _logger.LogError(ex, "Error registering user");
+                ErrorMessage = "An error occurred during registration. Please try again.";
                 return Page();
             }
         }

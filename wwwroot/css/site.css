@@ -30,19 +30,36 @@ footer {
 }
 
 span {
-    color: blue;
+    color: white;
 }
 
+header {
+    background-color: white;
+    padding: 1.5rem 0;
+}
 /* Navbar styles */
 .navbar {
-    background-color: #b2ebf2;
+    margin-top: 0.5rem;
     padding: 0.5rem 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #4da9ff; 
 }
+.navbar-brand {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+    max-width: 300px; 
+}
+    .navbar-brand img {
+        max-height: 200px; 
+        width: auto;
+        display: block;
+        margin: 0 auto;
+        transition: transform 0.3s ease;
+    }
 
-.navbar-brand img {
-    max-height: 220px;
-    width: auto;
+.navbar-brand img:hover {
+    transform: scale(1.05);
 }
 
 .navbar-nav {
@@ -54,7 +71,7 @@ span {
     }
 
     .navbar-nav .nav-link {
-        color: #007bff;
+        color: white !important; 
         font-weight: 500;
         font-size: 1.1rem;
         transition: all 0.3s ease;
@@ -63,9 +80,12 @@ span {
     }
 
         .navbar-nav .nav-link:hover {
-            color: #ffffff;
-            background-color: #007bff;
+            background-color: #ffffff33; 
         }
+
+.navbar-toggler {
+    border-color: white;
+}
 
 /* Home page styles */
 .home-container {
@@ -148,6 +168,8 @@ span {
 }
 
 /* Card Styles */
+
+
 .card {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -219,3 +241,27 @@ span {
         margin: 0;
         font-size: 1rem;
     }
+
+
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+    .card:hover {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+.travel-buddy-card {
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+    .travel-buddy-card .card-body {
+        padding: 1.25rem;
+    }
+
+.btn-contact {
+    width: 100%;
+    margin-top: 10px;
+}

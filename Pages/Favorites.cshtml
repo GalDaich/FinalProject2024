@@ -1,0 +1,84 @@
+﻿@page
+@model TripMatch.Pages.FavoritesModel
+@{
+    ViewData["Title"] = "My Favorites";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">My Favorite Travel Buddies</h2>
+                </div>
+                <div class="card-body">
+                    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                    {
+                        <div class="alert alert-danger">@Model.ErrorMessage</div>
+                    }
+
+                    @if (!Model.Favorites.Any())
+                    {
+                        <div class="alert alert-info">
+                            You haven't added any favorites yet. Browse your travel matches to add some!
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="row">
+                            @foreach (var (user, plan) in Model.Favorites)
+                            {
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <h5 class="card-title">@user.FullName</h5>
+                                                <form method="post" asp-page-handler="RemoveFavorite" class="d-inline">
+                                                    <input type="hidden" name="phoneNumber" value="@user.PhoneNumber" />
+                                                    <button type="submit" class="btn btn-link p-0">
+                                                        <i class="bi bi-heart-fill text-danger" style="font-size: 1.5rem;"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                            
+                                            <p class="card-text">
+                                                <small class="text-muted">@user.CurrentAge years old • @user.LivesAt</small>
+                                            </p>
+                                            
+                                            @if (plan != null)
+                                            {
+                                                <div class="mb-3">
+                                                    <strong>Latest Travel Plan:</strong>
+                                                    <p class="mb-1">📍 @plan.WantsToTravelTo</p>
+                                                    <p class="mb-1">📅 @plan.WantsToLeaveOn</p>
+                                                    <p class="mb-1">
+                                                        🎯 @(plan.IsSpontanious.ToLower() == "yes" 
+                                                            ? "Spontaneous Traveler" 
+                                                            : "Planned Traveler")
+                                                    </p>
+                                                </div>
+                                            }
+
+                                            <div class="mb-3">
+                                                <strong>Hobbies:</strong>
+                                                <div class="d-flex gap-2 flex-wrap">
+                                                    <span class="badge bg-primary">@user.Hobby1</span>
+                                                    <span class="badge bg-primary">@user.Hobby2</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="mt-3">
+                                                <strong>Contact:</strong>
+                                                <p class="mb-0">📱 @user.PhoneNumber</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

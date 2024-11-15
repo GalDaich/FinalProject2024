@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\project - Copy\\TripMatch\\TripMatch.csproj": {}
+    "C:\\Users\\User\\Desktop\\FinalProject2024-ver2\\TripMatch.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\project - Copy\\TripMatch\\TripMatch.csproj": {
+    "C:\\Users\\User\\Desktop\\FinalProject2024-ver2\\TripMatch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\project - Copy\\TripMatch\\TripMatch.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\FinalProject2024-ver2\\TripMatch.csproj",
         "projectName": "TripMatch",
-        "projectPath": "C:\\Users\\User\\Desktop\\project - Copy\\TripMatch\\TripMatch.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\FinalProject2024-ver2\\TripMatch.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\project - Copy\\TripMatch\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\FinalProject2024-ver2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,9 +44,41 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[33.0.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[2.27.0, )"
+              "version": "[2.22.0, )"
             }
           },
           "imports": [

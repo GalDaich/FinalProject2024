@@ -1,0 +1,98 @@
+﻿@page
+@model TripMatch.Pages.TravelPlanModel
+@{
+    ViewData["Title"] = "Create Travel Plan";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title text-center">Create Your Travel Plan</h2>
+                </div>
+                <div class="card-body">
+                    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                    {
+                        <div class="alert alert-danger">@Model.ErrorMessage</div>
+                    }
+                    @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+                    {
+                        <div class="alert alert-success">@Model.SuccessMessage</div>
+                    }
+
+                    <form method="post">
+                           <div class="mb-4">
+                            <label asp-for="WantsToTravelTo" class="form-label">Travel Destination</label>
+                            <select asp-for="WantsToTravelTo" class="form-select" required>
+                                <option value="">Select Destination</option>
+                                <option value="south america - for example, brazil, argentina, chile, peru, colombia">south america - for example, brazil, argentina, chile, peru, colombia</option>
+                                <option value="north america - for example, united states, canada, mexico">north america - for example, united states, canada, mexico</option>
+                                <option value="western europe - for example, france, germany, netherlands, belgium, switzerland">western europe - for example, france, germany, netherlands, belgium, switzerland</option>
+                                <option value="eastern europe - for example, russia, poland, czech republic, hungary, romania">eastern europe - for example, russia, poland, czech republic, hungary, romania</option>
+                                <option value="northern europe (scandinavia) - for example, sweden, norway, denmark, finland">northern europe (scandinavia) - for example, sweden, norway, denmark, finland</option>
+                                <option value="southern europe - for example, italy, spain, greece, portugal">southern europe - for example, italy, spain, greece, portugal</option>
+                                <option value="east asia - for example, china, japan, south korea, taiwan">east asia - for example, china, japan, south korea, taiwan</option>
+                                <option value="southeast asia - for example, thailand, vietnam, indonesia, malaysia, philippines">southeast asia - for example, thailand, vietnam, indonesia, malaysia, philippines</option>
+                                <option value="south asia - for example, india, sri lanka, nepal, maldives">south asia - for example, india, sri lanka, nepal, maldives</option>
+                                <option value="central asia - for example, kazakhstan, uzbekistan, kyrgyzstan, turkmenistan">central asia - for example, kazakhstan, uzbekistan, kyrgyzstan, turkmenistan</option>
+                                <option value="middle east - for example, uae, israel, jordan, egypt">middle east - for example, uae, israel, jordan, egypt</option>
+                                <option value="north africa - for example, morocco, egypt, tunisia, algeria">north africa - for example, morocco, egypt, tunisia, algeria</option>
+                                <option value="southern africa - for example, south africa, namibia, botswana, zimbabwe">southern africa - for example, south africa, namibia, botswana, zimbabwe</option>
+                                <option value="central africa - for example, democratic republic of the congo, cameroon, gabon, central african republic">central africa - for example, democratic republic of the congo, cameroon, gabon, central african republic</option>
+                                <option value="central america and the caribbean - for example, costa rica, panama, belize, bahamas, jamaica, dominican republic">central america and the caribbean - for example, costa rica, panama, belize, bahamas, jamaica, dominican republic</option>
+                                <option value="oceania - for example, australia, new zealand, fiji, papua new guinea">oceania - for example, australia, new zealand, fiji, papua new guinea</option>
+                            </select>
+                            <span asp-validation-for="WantsToTravelTo" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="WantsToLeaveOn" class="form-label">When would you like to travel?</label>
+                            <select asp-for="WantsToLeaveOn" class="form-select" required>
+                                <option value="">Select a month</option>
+                                <option value="January">January</option>
+                                <option value="February">February</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>
+                            </select>
+                            <span asp-validation-for="WantsToLeaveOn" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label">Are you spontaneous with travel plans?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" asp-for="IsSpontanious" value="yes" id="spontaneousYes" required>
+                                <label class="form-check-label" for="spontaneousYes">
+                                    Yes, I'm flexible and spontaneous
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" asp-for="IsSpontanious" value="no" id="spontaneousNo">
+                                <label class="form-check-label" for="spontaneousNo">
+                                    No, I prefer planned itineraries
+                                </label>
+                            </div>
+                            <span asp-validation-for="IsSpontanious" class="text-danger"></span>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Create Travel Plan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

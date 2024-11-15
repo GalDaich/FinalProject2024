@@ -1,77 +1,75 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
-using MongoDB.Driver;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
+using TripMatch.Services;
 
 namespace TripMatch.Pages
 {
     public class LoginModel : PageModel
     {
-        private readonly MongoDBConnection _db;
+        private readonly MongoDBService _mongoDBService;
         private readonly ILogger<LoginModel> _logger;
 
         [BindProperty]
-        public string Email { get; set; }
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Invalid email format")]
+        public string EmailAddress { get; set; } = string.Empty;
 
         [BindProperty]
-        public string Password { get; set; }
+        [Required(ErrorMessage = "Password is required")]
+        public string Password { get; set; } = string.Empty;
 
-        public string ErrorMessage { get; set; }
+        public string? ErrorMessage { get; set; }
 
-        public LoginModel(MongoDBConnection db, ILogger<LoginModel> logger)
+        public LoginModel(MongoDBService mongoDBService, ILogger<LoginModel> logger)
         {
-            _db = db;
+            _mongoDBService = mongoDBService;
             _logger = logger;
         }
 
         public IActionResult OnGet()
         {
-            // אם המשתמש כבר מחובר, נעביר אותו לדף הבית
-            if (HttpContext.Session.GetString("Username") != null)
+            if (HttpContext.Session.GetString("UserId") != null)
             {
                 return RedirectToPage("/Index");
             }
             return Page();
         }
 
-        public async Task<IActionResult> OnPostLogin()
+        public async Task<IActionResult> OnPostAsync()
         {
-            _logger.LogInformation("Attempting to login with Email: {Email}", Email);
-
-            // בדיקה שהשדות לא ריקים
-            if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password))
+            try
             {
-                ErrorMessage = "Please fill in all fields.";
+                if (!ModelState.IsValid)
+                {
+                    return Page();
+                }
+
+                var user = await _mongoDBService.GetUserByEmailAsync(EmailAddress);
+                if (user == null || user.Password != Password)
+                {
+                    ErrorMessage = "Invalid email or password";
+                    return Page();
+                }
+
+                // Set session
+                HttpContext.Session.SetString("UserId", user.Id!);
+                HttpContext.Session.SetString("UserName", user.FullName);
+                HttpContext.Session.SetString("UserEmail", user.EmailAddress);
+
+                return RedirectToPage("/Index");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error during login");
+                ErrorMessage = "An error occurred during login. Please try again.";
                 return Page();
             }
+        }
 
-            var user = _db.Users.Find(u => u.EmailAddress.ToLower() == Email.ToLower()).FirstOrDefault();
-
-            if (user == null)
-            {
-                _logger.LogWarning("Login failed: User with Email {Email} not found.", Email);
-                ErrorMessage = "Login details are incorrect. Please try again.";
-                return Page();
-            }
-
-            if (user.Password != Password)
-            {
-                _logger.LogWarning("Login failed: Incorrect password for Email {Email}.", Email);
-                ErrorMessage = "Login details are incorrect. Please try again.";
-                return Page();
-            }
-
-            // שמירת פרטי המשתמש ב-Session
-            HttpContext.Session.SetString("Username", user.Username);
-            HttpContext.Session.SetString("UserId", user.Id.ToString());
-
-            _logger.LogInformation("Login successful for Email: {Email}", Email);
-
-            TempData["SuccessMessage"] = "Login successful!";
-
+        public IActionResult OnPostLogout()
+        {
+            HttpContext.Session.Clear();
             return RedirectToPage("/Index");
         }
     }
