@@ -78,6 +78,31 @@ namespace TripMatch.Pages
         "Safed", "Sderot", "Tel Aviv", "Tiberias", "Tirat Carmel", "Tzfat",
         "Yavne", "Yehud", "Yokneam", "Zefat"
     };
+
+        public async Task<IActionResult> OnPostDeleteAccountAsync()
+        {
+            try
+            {
+                var userId = HttpContext.Session.GetString("UserId");
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return RedirectToPage("/Login");
+                }
+
+                await _mongoDBService.DeleteUserAsync(userId);
+
+                // Clear session
+                HttpContext.Session.Clear();
+
+                return RedirectToPage("/Index");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error deleting user account");
+                ErrorMessage = "Error deleting account. Please try again.";
+                return Page();
+            }
+        }
         public async Task<IActionResult> OnGetAsync()
         {
             var userId = HttpContext.Session.GetString("UserId");

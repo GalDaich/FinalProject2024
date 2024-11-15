@@ -327,6 +327,42 @@ namespace TripMatch.Services
             }
         }
 
+        public async Task DeleteUserAsync(string userId)
+        {
+            try
+            {
+                var user = await GetUserByIdAsync(userId);
+                if (user == null)
+                {
+                    throw new InvalidOperationException("User not found");
+                }
+
+                // Delete user's travel plans
+                await _travelPlansCollection.DeleteManyAsync(tp => tp.PhoneNumber == user.PhoneNumber);
+
+                // Delete user's favorites
+                await _favoritesCollection.DeleteManyAsync(f => f.UserId == userId);
+
+                // Delete references to user in other users' favorites
+                await _favoritesCollection.DeleteManyAsync(f => f.FavoritePhoneNumber == user.PhoneNumber);
+
+                // Finally, delete the user
+                var result = await _usersCollection.DeleteOneAsync(u => u.Id == userId);
+
+                if (result.DeletedCount == 0)
+                {
+                    throw new InvalidOperationException("Failed to delete user");
+                }
+
+                _logger.LogInformation($"Successfully deleted user with ID: {userId} and all related data");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error deleting user with ID: {userId}");
+                throw;
+            }
+        }
+
         public async Task<User?> GetUserByPhoneNumberAsync(string phoneNumber)
         {
             try
