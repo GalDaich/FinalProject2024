@@ -54,10 +54,29 @@ namespace TripMatch.Pages
                     return Page();
                 }
 
-                var phoneNumbers = matchingPlans.Select(p => p.PhoneNumber).Distinct();
+                var currentUser = await _mongoDBService.GetUserByIdAsync(userId);
+                if (currentUser == null)
+                {
+                    return RedirectToPage("/Login");
+                }
+
+                // Use HashSet to track unique phone numbers we've already processed
+                var processedPhoneNumbers = new HashSet<string>();
 
                 foreach (var plan in matchingPlans)
                 {
+                    // Skip if it's the current user's plan
+                    if (plan.PhoneNumber == currentUser.PhoneNumber)
+                    {
+                        continue;
+                    }
+
+                    // Skip if we've already processed this phone number
+                    if (processedPhoneNumbers.Contains(plan.PhoneNumber))
+                    {
+                        continue;
+                    }
+
                     var user = await _mongoDBService.GetUserByPhoneNumberAsync(plan.PhoneNumber);
                     if (user != null)
                     {
@@ -75,10 +94,13 @@ namespace TripMatch.Pages
                             Hobbies = new[] { user.Hobby1, user.Hobby2 },
                             IsFavorite = isFavorite
                         });
+
+                        // Add the phone number to our processed set
+                        processedPhoneNumbers.Add(plan.PhoneNumber);
                     }
                 }
 
-                _logger.LogInformation($"Found {MatchedTravelers.Count} matching travelers");
+                _logger.LogInformation($"Found {MatchedTravelers.Count} unique matching travelers");
                 return Page();
             }
             catch (Exception ex)
@@ -111,7 +133,6 @@ namespace TripMatch.Pages
                     SuccessMessage = "Added to favorites.";
                 }
 
-                // Redirect back to the same cluster page
                 return RedirectToPage(new { cluster = CurrentCluster });
             }
             catch (Exception ex)
