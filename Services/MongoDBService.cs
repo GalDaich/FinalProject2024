@@ -264,6 +264,14 @@ namespace TripMatch.Services
         {
             try
             {
+                // Get the existing user to check if phone number has changed
+                var currentUser = await _usersCollection.Find(u => u.Id == user.Id).FirstOrDefaultAsync();
+                if (currentUser == null)
+                {
+                    throw new InvalidOperationException("User not found");
+                }
+
+                // Check for duplicate email (excluding current user)
                 var existingUser = await _usersCollection.Find(u =>
                     u.EmailAddress.ToLower() == user.EmailAddress.ToLower() &&
                     u.Id != user.Id).FirstOrDefaultAsync();
@@ -271,6 +279,34 @@ namespace TripMatch.Services
                 if (existingUser != null)
                 {
                     throw new InvalidOperationException("Email address is already in use by another account");
+                }
+
+                // Check if phone number has changed
+                bool phoneNumberChanged = currentUser.PhoneNumber != user.PhoneNumber;
+                if (phoneNumberChanged)
+                {
+                    // Check if new phone number is already in use
+                    var existingUserWithPhone = await _usersCollection.Find(u =>
+                        u.PhoneNumber == user.PhoneNumber &&
+                        u.Id != user.Id).FirstOrDefaultAsync();
+
+                    if (existingUserWithPhone != null)
+                    {
+                        throw new InvalidOperationException("Phone number is already in use by another account");
+                    }
+
+                    // Update phone number in TravelPlans collection
+                    var travelPlansFilter = Builders<TravelPlans>.Filter.Eq(tp => tp.PhoneNumber, currentUser.PhoneNumber);
+                    var travelPlansUpdate = Builders<TravelPlans>.Update.Set(tp => tp.PhoneNumber, user.PhoneNumber);
+                    await _travelPlansCollection.UpdateManyAsync(travelPlansFilter, travelPlansUpdate);
+
+                    // Update phone number in Favorites collection (where this user is favorited by others)
+                    var favoritesFilter = Builders<Favorite>.Filter.Eq(f => f.FavoritePhoneNumber, currentUser.PhoneNumber);
+                    var favoritesUpdate = Builders<Favorite>.Update.Set(f => f.FavoritePhoneNumber, user.PhoneNumber);
+                    await _favoritesCollection.UpdateManyAsync(favoritesFilter, favoritesUpdate);
+
+                    _logger.LogInformation($"Updated phone number from {currentUser.PhoneNumber} to {user.PhoneNumber} " +
+                                         $"for user {user.Id} across all collections");
                 }
 
                 user.UpdateAge();
