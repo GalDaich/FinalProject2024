@@ -63,6 +63,7 @@ namespace TripMatch.Pages
             return new ValidationResult(ErrorMessage ?? $"Minimum age required is {_minimumAge}");
         }
     }
+
     public class RegistrationModel : PageModel
     {
         private readonly MongoDBService _db;
@@ -113,7 +114,21 @@ namespace TripMatch.Pages
         public string Hobby2 { get; set; }
 
         public string ErrorMessage { get; set; }
-
+        public List<string> IsraeliCities { get; } = new List<string>
+        {
+            "Afula", "Arad", "Ariel", "Ashdod", "Ashkelon", "Bat Yam", "Be'er Sheva",
+            "Beit She'an", "Beit Shemesh", "Bet Shemesh", "Bnei Brak", "Dimona",
+            "Eilat", "Ganei Tikva", "Gedera", "Givatayim", "Hadera", "Haifa",
+            "Herzliya", "Hod HaSharon", "Holon", "Jerusalem", "Karmiel", "Kfar Saba",
+            "Kfar Yona", "Kiryat Ata", "Kiryat Bialik", "Kiryat Gat", "Kiryat Motzkin",
+            "Kiryat Ono", "Kiryat Shmona", "Kiryat Yam", "Lod", "Ma'alot-Tarshiha",
+            "Mevo Betar", "Migdal HaEmek", "Modi'in-Maccabim-Re'ut", "Nahariya",
+            "Nazareth", "Nes Ziona", "Nesher", "Netanya", "Netivot", "Omer",
+            "Or Yehuda", "Pardes Hanna-Karkur", "Petah Tikva", "Raanana", "Ramat Gan",
+            "Ramat Hasharon", "Ramla", "Rehovot", "Rishon LeZion", "Rosh HaAyin",
+            "Safed", "Sderot", "Tel Aviv", "Tiberias", "Tirat Carmel", "Tzfat",
+            "Yavne", "Yehud", "Yokneam", "Zefat"
+        };
         public RegistrationModel(MongoDBService db, ILogger<RegistrationModel> logger)
         {
             _db = db;
@@ -162,7 +177,6 @@ namespace TripMatch.Pages
                     return Page();
                 }
 
-                //additional validation for date of birth
                 if (DateOfBirth.Year <= 1900 || DateOfBirth.Year > DateTime.Today.Year)
                 {
                     ModelState.AddModelError("DateOfBirth", "Please enter a valid date of birth");
@@ -180,7 +194,7 @@ namespace TripMatch.Pages
                     EmailAddress = EmailAddress,
                     Password = Password, 
                     PhoneNumber = PhoneNumber,
-                    DateOfBirth = DateOfBirth,
+                    DateOfBirth = DateTime.SpecifyKind(DateOfBirth, DateTimeKind.Local), 
                     LivesAt = LivesAt,
                     Hobby1 = Hobby1,
                     Hobby2 = Hobby2

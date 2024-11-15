@@ -48,11 +48,19 @@
                                     <span asp-validation-for="DateOfBirth" class="text-danger"></span>
                                 </div>
 
-                                <div class="form-group mt-3">
-                                    <label asp-for="LivesAt"></label>
-                                    <input asp-for="LivesAt" class="form-control">
-                                    <span asp-validation-for="LivesAt" class="text-danger"></span>
-                                </div>
+<div class="form-group mt-3">
+    <label asp-for="LivesAt"></label>
+    <div class="custom-select-container">
+        <select asp-for="LivesAt" class="custom-select">
+            <option value="">Choose location</option>
+            @foreach (var city in Model.IsraeliCities.OrderBy(c => c))
+            {
+                <option value="@city">@city</option>
+            }
+        </select>
+    </div>
+    <span asp-validation-for="LivesAt" class="text-danger"></span>
+</div>
 
                                 <div class="form-group mt-3">
                                     <label asp-for="Hobby1"></label>

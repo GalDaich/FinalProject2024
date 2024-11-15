@@ -10035,11 +10035,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\FinalProject2024-ver2\\TripMatch.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\FinalProject2024\\FinalProject2024\\TripMatch.csproj",
       "projectName": "TripMatch",
-      "projectPath": "C:\\Users\\User\\Desktop\\FinalProject2024-ver2\\TripMatch.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\FinalProject2024\\FinalProject2024\\TripMatch.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\FinalProject2024-ver2\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\FinalProject2024\\FinalProject2024\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

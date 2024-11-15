@@ -35,7 +35,10 @@ namespace TripMatch.Pages
         [BindProperty]
         [Required(ErrorMessage = "Date of birth is required")]
         [Display(Name = "Date of Birth")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DateOfBirth { get; set; }
+
 
         [BindProperty]
         [Required(ErrorMessage = "Location is required")]
@@ -60,7 +63,21 @@ namespace TripMatch.Pages
             _mongoDBService = mongoDBService;
             _logger = logger;
         }
-
+        public List<string> IsraeliCities { get; } = new List<string>
+    {
+        "Afula", "Arad", "Ariel", "Ashdod", "Ashkelon", "Bat Yam", "Be'er Sheva",
+        "Beit She'an", "Beit Shemesh", "Bet Shemesh", "Bnei Brak", "Dimona",
+        "Eilat", "Ganei Tikva", "Gedera", "Givatayim", "Hadera", "Haifa",
+        "Herzliya", "Hod HaSharon", "Holon", "Jerusalem", "Karmiel", "Kfar Saba",
+        "Kfar Yona", "Kiryat Ata", "Kiryat Bialik", "Kiryat Gat", "Kiryat Motzkin",
+        "Kiryat Ono", "Kiryat Shmona", "Kiryat Yam", "Lod", "Ma'alot-Tarshiha",
+        "Mevo Betar", "Migdal HaEmek", "Modi'in-Maccabim-Re'ut", "Nahariya",
+        "Nazareth", "Nes Ziona", "Nesher", "Netanya", "Netivot", "Omer",
+        "Or Yehuda", "Pardes Hanna-Karkur", "Petah Tikva", "Raanana", "Ramat Gan",
+        "Ramat Hasharon", "Ramla", "Rehovot", "Rishon LeZion", "Rosh HaAyin",
+        "Safed", "Sderot", "Tel Aviv", "Tiberias", "Tirat Carmel", "Tzfat",
+        "Yavne", "Yehud", "Yokneam", "Zefat"
+    };
         public async Task<IActionResult> OnGetAsync()
         {
             var userId = HttpContext.Session.GetString("UserId");
@@ -74,6 +91,8 @@ namespace TripMatch.Pages
                 var user = await _mongoDBService.GetUserByIdAsync(userId);
                 if (user != null)
                 {
+                    var originalDateOfBirth = user.DateOfBirth;
+
                     FullName = user.FullName;
                     EmailAddress = user.EmailAddress;
                     PhoneNumber = user.PhoneNumber;
@@ -111,56 +130,62 @@ namespace TripMatch.Pages
 
             try
             {
-                var user = await _mongoDBService.GetUserByIdAsync(userId);
-                if (user == null)
+                var currentUser = await _mongoDBService.GetUserByIdAsync(userId);
+                if (currentUser == null)
                 {
                     return RedirectToPage("/Login");
                 }
 
-                // Store original email for comparison
-                var originalEmail = user.EmailAddress;
+                var originalDateOfBirth = currentUser.DateOfBirth;
 
-                // Check if email is being changed and if it's already in use
-                if (originalEmail.ToLower() != EmailAddress.ToLower())
+                if (EmailAddress.ToLower() != currentUser.EmailAddress.ToLower())
                 {
-                    var existingUser = await _mongoDBService.GetUserByEmailAsync(EmailAddress);
-                    if (existingUser != null)
+                    var existingUserWithEmail = await _mongoDBService.GetUserByEmailAsync(EmailAddress);
+                    if (existingUserWithEmail != null && existingUserWithEmail.Id != userId)  // הוספת בדיקה שזה לא המשתמש עצמו
                     {
                         ModelState.AddModelError("EmailAddress", "This email is already in use");
+                        DateOfBirth = originalDateOfBirth;
                         return Page();
                     }
                 }
 
-                // Update user object
-                user.FullName = FullName;
-                user.EmailAddress = EmailAddress;
-                user.PhoneNumber = PhoneNumber;
-                user.DateOfBirth = DateOfBirth;
-                user.LivesAt = LivesAt;
-                user.Hobby1 = Hobby1;
-                user.Hobby2 = Hobby2;
+                if (PhoneNumber != currentUser.PhoneNumber)
+                {
+                    var existingUserWithPhone = await _mongoDBService.GetUserByPhoneNumberAsync(PhoneNumber);
+                    if (existingUserWithPhone != null && existingUserWithPhone.Id != userId) // הוספת בדיקה שזה לא המשתמש עצמו
+                    {
+                        ModelState.AddModelError("PhoneNumber", "This phone number is already in use");
+                        DateOfBirth = originalDateOfBirth;
+                        return Page();
+                    }
+                }
+
+                currentUser.FullName = FullName;
+                currentUser.EmailAddress = EmailAddress;
+                currentUser.PhoneNumber = PhoneNumber;
+                currentUser.LivesAt = LivesAt;
+                currentUser.Hobby1 = Hobby1;
+                currentUser.Hobby2 = Hobby2;
+                currentUser.DateOfBirth = originalDateOfBirth;
 
                 if (!string.IsNullOrEmpty(Password))
                 {
-                    user.Password = Password; // In production, use password hashing
+                    currentUser.Password = Password;
                 }
 
-                user.UpdateAge(); // Update age based on date of birth
+                currentUser.UpdateAge();
+                await _mongoDBService.UpdateUserAsync(currentUser);
 
-                await _mongoDBService.UpdateUserAsync(user);
-
-                // Update session with new values
-                HttpContext.Session.SetString("UserName", user.FullName);
-                HttpContext.Session.SetString("UserEmail", user.EmailAddress);
-                // Maintain the UserId in session
-                HttpContext.Session.SetString("UserId", user.Id);
+                HttpContext.Session.SetString("UserName", currentUser.FullName);
+                HttpContext.Session.SetString("UserEmail", currentUser.EmailAddress);
 
                 SuccessMessage = "Profile updated successfully";
+                DateOfBirth = originalDateOfBirth;
                 return Page();
             }
             catch (InvalidOperationException ex)
             {
-                _logger.LogError(ex, "Error updating user profile - possibly duplicate email");
+                _logger.LogError(ex, "Error updating user profile - validation error");
                 ErrorMessage = ex.Message;
                 return Page();
             }

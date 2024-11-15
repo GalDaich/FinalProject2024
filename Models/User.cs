@@ -31,6 +31,7 @@ namespace TripMatch.Models
         public string PhoneNumber { get; set; } = string.Empty;
 
         [BsonElement("dateOfBirth")]
+        [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
         [Required(ErrorMessage = "Date of birth is required")]
         public DateTime DateOfBirth { get; set; }
 
