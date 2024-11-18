@@ -34,7 +34,7 @@ TripMatch is a web application that helps users find compatible travel companion
 ### Prerequisites
 Before you start, make sure you have the following installed:
 - [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
-- [Python 3.8+](https://www.python.org/downloads/)
+- [Python 3.8+](https://www.python.org/downloads/) - During the installation, it is important to call the option "Add Python to PATH"
 - [MongoDB Community Server](https://www.mongodb.com/try/download/community)
 
 ## Step-by-Step Installation - 
@@ -55,7 +55,7 @@ python.exe -m pip install --upgrade pip
 ➜ Run this in cmd (adjust path to your computer): cd \FinalProject2024\ML-Clustering
 
 ### Run clustering algorithm on Travelplans DB:
-After navigating to the machine learning folder ➜ Run this in cmd: python ClusterDB.py<br>
+After navigating to the machine learning folder ➜ Run this in cmd: python ClusterDB.py
 Wait for process to complete
 
 ### Setting up flask application
