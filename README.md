@@ -43,15 +43,14 @@ Before you start, make sure you have the following installed:
 #### Step 2: Navigate to User Directory
 ➜ Run this in cmd: cd %USERPROFILE%
 #### Step 3: Create virtual environment
-➜ Run this in cmd: - python -m venv venv
+➜ Run this in cmd: python -m venv venv
 #### Step 4: Activate virtual environment
 ➜ Run this in cmd: venv\Scripts\activate
-#### Step 5: Update setuptools and pip (IMPORTANT - do these in order!) -
+#### Step 5: Update setuptools and pip
 ➜ Run this in cmd:
-python -m pip install setuptools<br>
-python -m pip install --upgrade pip<br>
+python.exe -m pip install --upgrade pip
 #### Step 6: Install necessary packages
-➜ Run this in cmd: - pip install numpy pandas scikit-learn flask pymongo kmodes
+➜ Run this in cmd: pip install numpy pandas scikit-learn flask pymongo kmodes flask-cors
 #### Step 7: Navigate to machine learning folder
 ➜ Run this in cmd (adjust path to your computer): cd \FinalProject2024\ML-Clustering
 
@@ -60,9 +59,7 @@ After navigating to the machine learning folder ➜ Run this in cmd: python Clus
 Wait for process to complete
 
 ### Setting up flask application
-Open a new CMD<br>
-Start up the virual environment<br> 
-Navigate to the machine learning folder and start the flask app ➜ Run this in cmd: python app.py
+start the flask app ➜ Run this in cmd: python app.py
 
 ## Open MongoDB compass
 
